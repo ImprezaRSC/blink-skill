@@ -1,6 +1,6 @@
 from mycroft import MycroftSkill, intent_file_handler
 import time
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 import subprocess as sub
 
 class Blink(MycroftSkill):
