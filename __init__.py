@@ -21,7 +21,7 @@ class Blink(MycroftSkill):
         #GPIO.output(green,True)
         #time.sleep(1)
         #GPIO.output(green,False)
-        s = "./blink.c"
+        s = "./blink"
         subprocess.call([s],shell=True)
         time.sleep(5)
         #GPIO.cleanup()
