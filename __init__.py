@@ -23,7 +23,8 @@ class Blink(MycroftSkill):
         #GPIO.output(green,False)
         s = "./blink.c"
         subprocess.call([s],shell=True)
-        GPIO.cleanup()
+        time.sleep(5)
+        #GPIO.cleanup()
 
 def create_skill():
     return Blink()
