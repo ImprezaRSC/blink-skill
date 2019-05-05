@@ -1,6 +1,5 @@
 from mycroft import MycroftSkill, intent_file_handler
 import time
-#import RPi.GPIO as GPIO
 import subprocess
 
 class Blink(MycroftSkill):
@@ -10,11 +9,11 @@ class Blink(MycroftSkill):
     @intent_file_handler('blink.intent')
     def handle_blink(self, message):
         self.speak_dialog('blink')
-        
-        s = "./blink"
+
+        s = "/opt/mycroft/skills/blink-skill/blink"
         subprocess.run([s],shell=True)
         time.sleep(5)
-        
+
 def create_skill():
     return Blink()
 
